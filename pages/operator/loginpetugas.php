@@ -8,7 +8,7 @@
     <style>
         body {
             font-family: 'Roboto', Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-color: #; /* warna buat background body login */
             display: block;
             justify-content: center;
             align-items: center;
@@ -17,18 +17,18 @@
         }
 
         .login-box {
-            background-color: #fff;
+            background-color: #87ceeb;
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             padding: 40px;
             width: 100%;
             max-width: 400px;
-            margin: 5% 35%;
+            margin: 3% 32%;
         }
 
         .login-box h2 {
             text-align: center;
-            color: #1877f2;
+            color: #ffffff;
             margin-bottom: 20px;
             font-size: 24px;
         }
