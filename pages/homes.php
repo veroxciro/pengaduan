@@ -1,163 +1,164 @@
 <div class="page">
 <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            line-height: 1.6;
-        }
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f8f5e4; /* Sand */
+        color: #333;
+        line-height: 1.6;
+    }
 
-        .page {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+    .page {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
 
-        .slider-container {
-            position: relative;
-            width: 100%;
-            height: 500px;
-            overflow: hidden;
-            border-radius: 15px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-            margin-bottom: 40px;
-        }
+    .slider-container {
+        position: relative;
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        margin-bottom: 40px;
+    }
 
-        .slider-wrapper {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-            height: 100%;
-        }
+    .slider-wrapper {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        height: 100%;
+    }
 
-        .slider-image {
-            min-width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+    .slider-image {
+        min-width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 
-        .slider-nav button {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(255, 255, 255, 0.7);
-            color: #333;
-            border: none;
-            padding: 15px 20px;
-            cursor: pointer;
-            font-size: 18px;
-            border-radius: 50%;
-            transition: all 0.3s ease;
-        }
+    .slider-nav button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(255, 255, 255, 0.8);
+        color: #333;
+        border: none;
+        padding: 15px 20px;
+        cursor: pointer;
+        font-size: 18px;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+    }
 
-        .slider-nav button:hover {
-            background-color: rgba(255, 255, 255, 0.9);
-        }
+    .slider-nav button:hover {
+        background-color: rgba(255, 255, 255, 0.9);
+    }
 
-        .slider-nav .prev {
-            left: 20px;
-        }
+    .slider-nav .prev {
+        left: 20px;
+    }
 
-        .slider-nav .next {
-            right: 20px;
-        }
+    .slider-nav .next {
+        right: 20px;
+    }
 
-        .slider-dot {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-        }
+    .slider-dot {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+    }
 
-        .slider-dot button {
-            width: 12px;
-            height: 12px;
-            background-color: rgba(255, 255, 255, 0.5);
-            border: none;
-            border-radius: 50%;
-            margin: 0 5px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
+    .slider-dot button {
+        width: 12px;
+        height: 12px;
+        background-color: rgba(255, 255, 255, 0.5);
+        border: none;
+        border-radius: 50%;
+        margin: 0 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
 
-        .popup {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            justify-content: center;
-            align-items: center;
-        }
+    .slider-dot button.active {
+        background-color: #87ceeb; /* Sky blue */
+        transform: scale(1.2);
+    }
 
-        .popup-content {
-            background-color: white;
-            padding: 20px;
-            border-radius: 5px;
-            text-align: center;
-        }
+    .popup {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        justify-content: center;
+        align-items: center;
+    }
 
-        .btn {
-            background-color: #007bff;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
+    .popup-content {
+        background-color: white;
+        padding: 20px;
+        border-radius: 5px;
+        text-align: center;
+    }
 
-        .btn:hover {
-            background-color: #0056b3;
-        }
+    .btn {
+        background-color: #87ceeb; /* Sky blue */
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
 
+    .btn:hover {
+        background-color: #4682b4; /* Steel blue */
+    }
 
-        .slider-dot button.active {
-            background-color: #fff;
-            transform: scale(1.2);
-        }
+    .visitors {
+        background-color: white;
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
 
-        .visitors {
-            background-color: white;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
+    .visitors h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+        color: #2c3e50;
+    }
 
-        .visitors h2 {
-            font-size: 28px;
-            margin-bottom: 20px;
-            color: #2c3e50;
-        }
+    .service-description p {
+        margin-bottom: 15px;
+    }
 
-        .service-description p {
-            margin-bottom: 15px;
-        }
+    .cta-button {
+        display: inline-block;
+        background-color: #87ceeb; /* Sky blue */
+        color: white;
+        padding: 12px 24px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+    }
 
-        .cta-button {
-            display: inline-block;
-            background-color: #3498db;
-            color: white;
-            padding: 12px 24px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-        }
+    .cta-button:hover {
+        background-color: #4682b4; /* Steel blue */
+    }
+</style>
 
-        .cta-button:hover {
-            background-color: #2980b9;
-        }
-    </style>
 </head>
 <body>
     <div class="page">
