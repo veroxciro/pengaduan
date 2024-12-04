@@ -8,13 +8,28 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
         body {
-            font-family: 'Roboto', Arial, sans-serif;            
+            margin: 0; /* Menghilangkan margin default */
+            height: 100vh; /* Mengatur tinggi body agar memenuhi viewport */
+            display: block; /* Pastikan body menggunakan display block */
+            
         }
+
+        .login-box {
+            background-color: #87ceeb; /* Sky blue */
+            padding: 2rem;
+            width: 100%;
+            border-radius: 10px;
+            max-width: 400px; 
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: auto; /* Memusatkan secara horizontal */
+            position: relative; /* Jika ingin memusatkan secara vertikal, bisa menggunakan posisi */
+            top: 200; /* Mengatur posisi dari atas */
+            transform: translateY(-50%); 
+                }
     </style>
 </head>
-<container-login-box class="flex items-center justify-center min-h-full ">
-    <div class="bg-white rounded-lg shadow-lg p-8 w-full max-w-md animate__animated animate__fadeIn">
-        <h2 class="text-2xl font-bold text-center text-blue-600 mb-6">Login Siswa</h2>
+<div class="login-box rounded-lg shadow-lg p-8 w-full max-w-md">
+<h2 class="text-2xl font-bold text-center mb-6 text-white">Login Siswa</h2>
         <form class="space-y-4" action="" method="post">
             <div class="relative">
                 <i class="fa fa-user absolute left-3 top-3 text-gray-400"></i>
@@ -31,7 +46,7 @@
                 <label for="showPassword" class="text-sm text-gray-600">Tampilkan password</label>
             </div>
 
-            <input type="submit" value="Login" class="w-full py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-300 ease-in-out transform hover:scale-105">
+            <input type="submit" value="Login" class="w-full py-2 bg-blue-600 text-black rounded-lg hover:bg-blue-700 transition duration-300 ease-in-out transform hover:scale-105">
         </form>
 
         <div class="mt-4 text-center">
