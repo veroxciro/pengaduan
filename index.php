@@ -11,267 +11,251 @@ session_start();
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <title>Pengaduan Digital - SMK Negeri 6 Kota Bekasi</title>
     <style>
-        * {
-            box-sizing: border-box;            
-            margin: 0;
-            padding: 0;
-        }
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
 
-        body {
-            font-family: "Poppins", sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f4f4f4;
-            transition: all 0.3s ease-in-out;
-        }
+    body {
+        font-family: "Poppins", sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f8f5e4; /* Sand */
+        transition: all 0.3s ease-in-out;
+    }
 
-        header {
-            background-color: #fff;
-            padding: 1rem;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease-in-out;
-        }
+    header {
+        background-color: #87ceeb; /* Sky blue */
+        padding: 1rem;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease-in-out;
+    }
 
-        .header-content {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            transition: all 0.3s ease-in-out;
-        }
+    .header-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        transition: all 0.3s ease-in-out;
+    }
 
-        .logo {
-            display: flex;
-            align-items: center;
-            transition: all 0.3s ease-in-out;
-        }
+    .logo {
+        display: flex;
+        align-items: center;
+        transition: all 0.3s ease-in-out;
+    }
 
-        .logo img {
-            width: 50px;
-            height: 50px;
-            margin-right: 10px;
-            transition: all 0.3s ease-in-out;
-        }
+    .logo img {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+        transition: all 0.3s ease-in-out;
+    }
 
-        .logo-text {
-            display: flex;
-            flex-direction: column;
-            transition: all 0.3s ease-in-out;
-        }
+    .logo-text {
+        display: flex;
+        flex-direction: column;
+        transition: all 0.3s ease-in-out;
+    }
 
-        .logo-text .title {
-            font-size: 18px;
-            font-weight: bold;
-            color: #333;
-            transition: all 0.3s ease-in-out;
-        }
+    .logo-text .title {
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+        transition: all 0.3s ease-in-out;
+    }
 
-        .logo-text .desc {
-            font-size: 14px;
-            color: #666;
-            transition: all 0.3s ease-in-out;
-        }
+    .logo-text .desc {
+        font-size: 14px;
+        color: #666;
+        transition: all 0.3s ease-in-out;
+    }
 
-        .navbar {
-            background-color: #3498db;
-            padding: 1rem 0;
-            transition: all 0.3s ease-in-out;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
+    .navbar {
+        background-color: #add8e6; /* Light sky blue */
+        padding: 1rem 0;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
 
-        .navbar:hover {
-            background-color: #2ecc71;
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-        }
+    .navbar:hover {
+        background-color: #f4e6c0; /* Sand (hover effect) */
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
 
+    .nav-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 1.5rem;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .nav-links a,
+    .dropdown .dropbtn {
+        color: #fff; /* White text */
+        text-decoration: none;
+        font-size: 1rem;
+        transition: color 0.3s, transform 0.3s;
+    }
+
+    .nav-links a:hover,
+    .dropdown:hover .dropbtn {
+        color: #f4e6c0; /* Sand */
+        transform: scale(1.1);
+    }
+
+    .dropdown {
+        position: relative;
+        z-index: 1000;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f8f5e4; /* Sand */
+        min-width: 160px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        border-radius: 4px;
+        transition: all 0.3s ease-in-out;
+        top: 100%;
+        left: 0;
+    }
+
+    .dropdown-content a {
+        color: #333;
+        padding: 12px 16px;
+        display: block;
+        transition: background-color 0.3s;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #d6cdbd; /* Soft sand */
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+        animation: fadeIn 0.3s ease-in-out;
+        z-index: 1000;
+    }
+
+    .search-form {
+        display: flex;
+        gap: 0.5rem;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .search-form input {
+        padding: 0.5rem;
+        border: 1px solid #d6cdbd; /* Sand border */
+        border-radius: 4px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .search-form input:focus {
+        outline: none;
+        box-shadow: 0 0 5px rgba(135, 206, 250, 0.5); /* Sky blue */
+    }
+
+    .search-form button {
+        padding: 0.5rem 1rem;
+        background-color: #87ceeb; /* Sky blue */
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .search-form button:hover {
+        background-color: #4682b4; /* Steel blue */
+        transform: scale(1.05);
+    }
+
+    .main-content {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 2rem;
+        background-color: #f8f5e4;
+        border-radius: 8px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    footer {
+        background-color: #add8e6; /* Light sky blue */
+        color: #333;
+        text-align: center;
+        padding: 1rem 0;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        transition: all 0.3s ease-in-out;
+    }
+
+    @media only screen and (max-width: 768px) {
+        .header-content,
         .nav-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            transition: all 0.3s ease-in-out;
+            flex-direction: column;
+            text-align: center;
         }
 
         .nav-links {
-            display: flex;
-            gap: 1.5rem;
-            transition: all 0.3s ease-in-out;
-        }
-
-        .nav-links a,
-        .dropdown .dropbtn {
-            color: white;
-            text-decoration: none;
-            font-size: 1rem;
-            transition: color 0.3s, transform 0.3s;
-        }
-
-        .nav-links a:hover,
-        .dropdown:hover .dropbtn {
-            color: #f1c40f;
-            transform: scale(1.1);
-        }
-
-        .dropdown {
-            position: relative;
-            z-index: 1000;
-            transition: all 0.3s ease-in-out;
-        }
-
-        .dropdown:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #fff;
-            min-width: 160px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-            border-radius: 4px;
-            transition: all 0.3s ease-in-out;
-            top: 100%;
-            left: 0;
-        }
-
-        .dropdown-content a {
-            color: #333;
-            padding: 12px 16px;
-            display: block;
-            transition: background-color 0.3s;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #f1f1f1;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-            animation: fadeIn 0.3s ease-in-out;
-            z-index: 1000;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            margin-top: 1rem;
         }
 
         .search-form {
-            display: flex;
-            gap: 0.5rem;
-            transition: all 0.3s ease-in-out;
+            margin-top: 1rem;
         }
+    }
 
-        .search-form input {
-            padding: 0.5rem;
-            border: none;
-            border-radius: 4px;
-            transition: all 0.3s ease-in-out;
-        }
+    .popup {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7); /* Black background with transparency */
+        justify-content: center;
+        align-items: center;
+    }
 
-        .search-form input:focus {
-            outline: none;
-            box-shadow: 0 0 5px rgba(46, 204, 113, 0.5);
-        }
+    .popup-content {
+        background-color: white;
+        padding: 20px;
+        border-radius: 5px;
+        text-align: center;
+    }
 
-        .search-form button {
-            padding: 0.5rem 1rem;
-            background-color: #2ecc71;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.3s;
-        }
+    .btn {
+        background-color: #87ceeb; /* Sky blue */
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
 
-        .search-form button:hover {
-            background-color: #27ae60;
-            transform: scale(1.05);
-        }
+    .btn:hover {
+        background-color: #4682b4; /* Steel blue */
+    }
+</style>
 
-        .main-content {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 2rem;            
-            border-radius: 8px;            
-            transition: all 0.3s ease-in-out;
-        }
-
-        footer {
-            background-color: #34495e;
-            color: #fff;
-            text-align: center;
-            padding: 1rem 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            transition: all 0.3s ease-in-out;
-        }
-
-        @media only screen and (max-width: 768px) {
-
-            .header-content,
-            .nav-content {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .nav-links {
-                margin-top: 1rem;
-            }
-
-            .search-form {
-                margin-top: 1rem;
-            }
-        }
-        .popup {
-            display: none; /* Hidden by default */
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7); /* Black background with transparency */
-            justify-content: center;
-            align-items: center;
-        }
-
-        .popup-content {
-            background-color: white;
-            padding: 20px;
-            border-radius: 5px;
-            text-align: center;
-        }
-
-        .btn {
-            background-color: #007bff;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .btn:hover {
-            background-color: #0056b3;
-        }
-
-    </style>
 
 </head>
 
