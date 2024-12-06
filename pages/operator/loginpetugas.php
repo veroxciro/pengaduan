@@ -8,7 +8,7 @@
     <style>
         body {
             font-family: 'Roboto', Arial, sans-serif;
-            background-color: #; /* warna buat background body login */
+            background: linear-gradient(to bottom, #0f0c29, #6760c3, #24243e);
             display: block;
             justify-content: center;
             align-items: center;
@@ -17,7 +17,7 @@
         }
 
         .login-box {
-            background-color: #87ceeb;
+            background: url("https://img.freepik.com/premium-vector/abstract-realistic-technology-particle-background_23-2148414765.jpg?w=740") no-repeat center/ cover;
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             padding: 40px;
@@ -68,8 +68,8 @@
         }
 
         input[type="submit"] {
-            background-color: #1877f2;
-            color: white;
+            background-color: #ffffff;
+            color: #8c1bb9;
             border: none;
             width: 100%;
             padding: 12px;
@@ -77,10 +77,12 @@
             font-size: 16px;
             cursor: pointer;
             transition: background-color 0.3s ease, transform 0.3s ease;
+            font-weight: bold; /* Membuat teks menjadi tebal (bold) */
+            font-family: 'Roboto', Arial, sans-serif; /* Pilih font yang lebih tebal */
         }
 
         input[type="submit"]:hover {
-            background-color: #166fe5;
+            background-color: #bd62e1;
             transform: scale(1.05);
         }
 
@@ -99,15 +101,21 @@
         .register-link {
             text-align: center;
             margin-top: 20px;
+            color: white; /* warnna daftar kiri */
         }
 
         .register-link a {
-            color: #1877f2;
-            text-decoration: none;
+            color: #ae3add; /* warna daftar nya */
+            font-weight: bold; /* Menambahkan font tebal */
+            text-decoration: none; /* Menghapus garis bawah */
         }
 
         .register-link a:hover {
-            text-decoration: underline;
+            color: #8e44ad; /* Warna ungu lebih gelap saat hover */
+        text-decoration: underline; /* Garis bawah saat hover */
+        }
+        label {
+            color: white; /* Mengubah warna teks menjadi putih */
         }
     </style>
 </head>
