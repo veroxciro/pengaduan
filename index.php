@@ -21,12 +21,12 @@ session_start();
         font-family: "Poppins", sans-serif;
         line-height: 1.6;
         color: #333;
-        background-color: #f8f5e4; /* Sand */
+        background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
         transition: all 0.3s ease-in-out;
     }
 
     header {
-        background-color: #87ceeb; /* Sky blue */
+        background-color: #f5f0f7; 
         padding: 1rem;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         transition: all 0.3s ease-in-out;
@@ -75,7 +75,7 @@ session_start();
     }
 
     .navbar {
-        background-color: #add8e6; /* Light sky blue */
+        background-color: #f0ecf3; 
         padding: 1rem 0;
         transition: all 0.3s ease-in-out;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -103,12 +103,15 @@ session_start();
     }
 
     .nav-links a,
-    .dropdown .dropbtn {
-        color: #fff; /* White text */
-        text-decoration: none;
-        font-size: 1rem;
-        transition: color 0.3s, transform 0.3s;
-    }
+.dropdown .dropbtn {
+    color: #ae3add; /* Warna teks ungu */
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif; /* Terapkan font Wendy One */
+    transition: color 0.3s, transform 0.3s;
+    font-weight: bold;
+}
+
 
     .nav-links a:hover,
     .dropdown:hover .dropbtn {
@@ -172,7 +175,7 @@ session_start();
 
     .search-form button {
         padding: 0.5rem 1rem;
-        background-color: #87ceeb; /* Sky blue */
+        background: linear-gradient(#0f0c29, #6760c3, #24243e);
         color: white;
         border: none;
         border-radius: 4px;
@@ -186,11 +189,9 @@ session_start();
     }
 
     .main-content {
-        max-width: 1200px;
-        margin: 2rem auto;
+        max-width: 1500px;
         padding: 2rem;
-        background-color: #f8f5e4;
-        border-radius: 8px;
+        background: linear-gradient(to bottom,  #cab2d7, #6760c3, #414155);
         transition: all 0.3s ease-in-out;
     }
 
@@ -254,6 +255,47 @@ session_start();
     .btn:hover {
         background-color: #4682b4; /* Steel blue */
     }
+
+    #scrollToTopBtn {
+    position: fixed;
+    bottom: 65px;
+    right: 50px;
+    display: none; /* Tombol akan tersembunyi secara default */
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    animation: idleAnim 2s infinite ease-in-out; /* Efek idle */
+}
+
+#scrollToTopBtn:hover {
+    background-color: #2c81ba;
+    transform: scale(1.1);
+}
+
+.logo-text .title, .logo-text .desc {
+    color: #ae3add;
+}
+
+/* Animasi idle naik-turun */
+@keyframes idleAnim {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
 </style>
 
 
@@ -303,6 +345,9 @@ session_start();
         </div>
     </div>
 
+    <button id="scrollToTopBtn" title="Kembali ke atas">⬆</button>
+
+
     <script>
         function showLoginPopup() {
             document.getElementById('loginPopup').style.display = 'flex'; // Show the popup
@@ -311,6 +356,26 @@ session_start();
         function closeLoginPopup() {
             document.getElementById('loginPopup').style.display = 'none'; // Hide the popup
         }
+
+        // Mendapatkan elemen tombol
+        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+        // Tampilkan tombol saat menggulir ke bawah
+        window.onscroll = function () {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                scrollToTopBtn.style.display = 'block'; // Tampilkan tombol
+            } else {
+                scrollToTopBtn.style.display = 'none'; // Sembunyikan tombol
+            }
+        };
+
+        // Gulir ke atas dengan animasi smooth
+        scrollToTopBtn.onclick = function () {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth', // Gulir perlahan
+            });
+        };
     </script>
                
             </div>
