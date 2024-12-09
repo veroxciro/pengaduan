@@ -92,7 +92,7 @@
         }
 
         .visitors {
-            background-color: white;
+            background-color: #f5f0f7;
             padding: 40px;
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -110,7 +110,7 @@
 
         .cta-button {
             display: inline-block;
-            background-color: #3498db;
+            background-color: #6760c3;
             color: white;
             padding: 12px 24px;
             text-decoration: none;
