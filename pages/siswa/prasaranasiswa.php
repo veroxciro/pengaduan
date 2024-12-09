@@ -90,7 +90,7 @@ if (isset($_POST['submit'])) {
         input[type=file]::file-selector-button {
             margin-right: 20px;
             border: none;
-            background: #084cdf;
+            background: #6760c3;
             padding: 10px 20px;
             border-radius: 10px;
             color: #fff;
@@ -114,7 +114,7 @@ if (isset($_POST['submit'])) {
     <div class="container mx-auto my-8 p-4">
         <!-- Biodata Siswa -->
  <div class="bg-white rounded-lg shadow-lg mb-6 animate__animated animate__fadeIn">
-            <div class="bg-blue-600 text-white p-4 rounded-t-lg flex items-center">
+            <div class="bg-purple-600 text-white p-4 rounded-t-lg flex items-center">
                 <i class="fas fa-user-circle mr-2 text-2xl"></i>
                 <h2 class="text-lg font-semibold">Biodata Siswa</h2>
             </div>
@@ -151,7 +151,7 @@ if (isset($_POST['submit'])) {
 
         <!-- Form Pengaduan -->
         <div class="bg-white rounded-lg shadow-lg mb-6 animate__animated animate__fadeIn">
-            <div class="bg-blue-600 text-white p-4 rounded-t-lg flex items-center">
+            <div class="bg-purple-600 text-white p-4 rounded-t-lg flex items-center">
                 <i class="fas fa-edit mr-2 text-2xl"></i>
                 <h2 class="text-lg font-semibold">Form Pengaduan Prasarana</h2>
             </div>
@@ -169,7 +169,7 @@ if (isset($_POST['submit'])) {
     <input type="file" id="images" name="foto" accept="image/*" required>
 </label>
                     </div>
-                    <button type="submit" name="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded">
+                    <button type="submit" name="submit" class="bg-purple-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded">
                         <i class="fas fa-paper-plane mr-2"></i> Kirim Pengaduan
                     </button>
                 </form>
@@ -178,7 +178,7 @@ if (isset($_POST['submit'])) {
 
         <!-- Tabel Riwayat Pengaduan -->
         <div class="bg-white rounded-lg shadow-lg mb-6 animate__animated animate__fadeIn">
-            <div class="bg-blue-600 text-white p-4 rounded-t-lg flex items-center">
+            <div class="bg-purple-600 text-white p-4 rounded-t-lg flex items-center">
                 <i class="fas fa-history mr-2 text-2xl"></i>
                 <h2 class="text-lg font-semibold">Riwayat Pengaduan Prasarana</h2>
             </div>
