@@ -23,7 +23,7 @@
             padding: 40px;
             width: 100%;
             max-width: 400px;
-            margin: 3% 32%;
+            margin: 3% 35%;
         }
 
         .login-box h2 {
