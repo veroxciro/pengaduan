@@ -66,7 +66,7 @@ $result = mysqli_query($conn, $query);
 <body class="bg-gray-100">
     <div class="container mx-auto px-4 py-8">
         <!-- Header -->
-        <div class="bg-sky-500 rounded-lg shadow-md p-6 mb-6">
+        <div class="bg-purple-500 rounded-lg shadow-md p-6 mb-6">
             <h1 class="text-2xl font-bold text-white mb-2">
                 <i class="fas fa-tools mr-2"></i>
                 Sistem Pengaduan Pra-Sarana
@@ -106,7 +106,7 @@ $result = mysqli_query($conn, $query);
                     <a href="indexoperator.php?page=prasarana" class="px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors">
                         <i class="fas fa-sync-alt mr-2"></i>Reset
                     </a>
-                    <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors">                            
+                    <button type="submit" class="px-4 py-2 bg-purple-500 text-white rounded-lg hover:bg-blue-600 transition-colors">                            
                         <i class="fas fa-filter mr-2"></i>Terapkan Filter
                     </button>   
                 </div>
@@ -115,7 +115,7 @@ $result = mysqli_query($conn, $query);
 
         <!-- Tombol Toggle Urutan -->
         <div class="mb-4">
-            <a href="?page=prasarana&search=<?php echo urlencode($search); ?>&status=<?php echo $status_filter; ?>&date_from=<?php echo $date_from; ?>&date_to=<?php echo $date_to; ?>&order=<?php echo $order === 'ASC' ? 'DESC' : 'ASC'; ?>" class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors">
+            <a href="?page=prasarana&search=<?php echo urlencode($search); ?>&status=<?php echo $status_filter; ?>&date_from=<?php echo $date_from; ?>&date_to=<?php echo $date_to; ?>&order=<?php echo $order === 'ASC' ? 'DESC' : 'ASC'; ?>" class="px-4 py-2 bg-purple-500 text-white rounded-lg hover:bg-blue-600 transition-colors">
                 <i class="fas fa-sort-amount-<?php echo $order === 'ASC' ? 'down' : 'up'; ?>"></i> Urutkan <?php echo $order === 'ASC' ? 'Terlama' : 'Terbaru'; ?>
             </a>
         </div>
