@@ -8,7 +8,7 @@
         .container {
             width: 50%;
             margin: 50px auto;
-            background-color: #ffffff;
+            background-color: #f5f0f7;
             padding: 40px;
             border-radius: 10px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
@@ -43,16 +43,13 @@
         input[type="submit"] {
             margin-top: 30px;
             padding: 14px;
-            background-color: #4CAF50;
+            background-color: #ae3add;
             color: white;
             border: none;
             border-radius: 6px;
             cursor: pointer;
             font-size: 18px;
             transition: background-color 0.3s ease;
-        }
-        input[type="submit"]:hover {
-            background-color: #45a049;
         }
         .message {
             margin-top: 20px;
@@ -72,27 +69,27 @@
 </head>
 <body>
     <div class="container">
-        <h2>Pendaftaran Siswa</h2>
+        <h2 style="color: #ae3add;">Pendaftaran Siswa</h2>
         <form class="register" action="" method="POST">
-            <label for="nis">NIS:</label>
+            <label for="nis" style="color: #ae3add;">NIS:</label>
             <input type="text" id="nis" name="nis" required>
             
-            <label for="nama">Nama Lengkap:</label>
+            <label for="nama" style="color: #ae3add;">Nama Lengkap:</label>
             <input type="text" id="nama" name="nama" required>
 
-            <label for="kelas">Kelas:</label>
+            <label for="kelas" style="color: #ae3add;">Kelas:</label>
             <input type="text" id="kelas" name="kelas" required>
 
-            <label for="jurusan">Jurusan:</label>
+            <label for="jurusan" style="color: #ae3add;">Jurusan:</label>
             <input type="text" id="jurusan" name="jurusan" required>
             
-            <label for="username">Username:</label>
+            <label for="username" style="color: #ae3add;">Username:</label>
             <input type="text" id="username" name="username" required>
             
-            <label for="password">Password:</label>
+            <label for="password" style="color: #ae3add;">Password:</label>
             <input type="password" id="password" name="password" required>
         
-            <label for="telp">Nomor Telepon:</label>
+            <label for="telp" style="color: #ae3add;">Nomor Telepon:</label>
             <input type="text" id="telp" name="telp" required>
             
             <input type="submit" value="Daftar">
