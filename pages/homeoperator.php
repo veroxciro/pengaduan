@@ -92,7 +92,7 @@
         }
 
         .welcome-section {
-            background-color: white;
+            background-color: #f5f0f7;
             padding: 40px;
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -129,7 +129,7 @@
         .tool h3 {
             font-size: 24px;
             margin-bottom: 10px;
-            color: #2980b9;
+            color: #ae3add;
         }
 
         .tool p {
@@ -177,21 +177,6 @@
         </a>
     </div>
 
-    <div class="main-content">
-        <?php 
-        if(isset($_GET['page'])){
-            $page = $_GET['page'];
-            switch($page) {
-                    case 'daftar';
-                    include "pages/daftarsiswa.php";
-                    break;
-                    case 'sarana';
-                    include "pages/operator/saranaoperator.php";
-                    break;
-            }
-        }
-        ?>
-    </div>
 
     <script>
         let currentSlide = 0;
