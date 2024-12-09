@@ -7,7 +7,7 @@
         .container {
             width: 50%;
             margin: 50px auto;
-            background-color: #ffffff;
+            background-color: #f5f0f7;
             padding: 40px;
             border-radius: 10px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
@@ -42,7 +42,7 @@
         input[type="submit"] {
             margin-top: 30px;
             padding: 14px;
-            background-color: #4CAF50;
+            background-color: #ae3add;
             color: white;
             border: none;
             border-radius: 6px;
@@ -51,7 +51,7 @@
             transition: background-color 0.3s ease;
         }
         input[type="submit"]:hover {
-            background-color: #45a049;
+            background-color: #b21cef;
         }
         .message {
             margin-top: 20px;
@@ -83,24 +83,24 @@
 </head>
 <body>
     <div class="container">
-        <h2>Pendaftaran Petugas</h2>
+        <h2 style="color: #ae3add;">Pendaftaran Petugas</h2>
         <form class="register" action="" method="POST">
-            <label for="id_petugas">ID Admin:</label>
+            <label for="id_petugas" style="color: #ae3add;">ID Admin:</label>
             <input type="text" id="id_petugas" name="id_petugas" required>
             
-            <label for="nama_petugas">Nama Lengkap:</label>
+            <label for="nama_petugas" style="color: #ae3add;">Nama Lengkap:</label>
             <input type="text" id="nama_petugas" name="nama_petugas" required>
             
-            <label for="username">Username:</label>
+            <label for="username" style="color: #ae3add;">Username:</label>
             <input type="text" id="username" name="username" required>
             
-            <label for="password">Password:</label>
+            <label for="password" style="color: #ae3add;">Password:</label>
             <input type="password" id="password" name="password" required>
         
-            <label for="telp">Nomor Telepon:</label>
+            <label for="telp" style="color: #ae3add;">Nomor Telepon:</label>
             <input type="text" id="telp" name="telp" required>
 
-            <label for="level">Level:</label>
+            <label for="level" style="color: #ae3add;">Level:</label>
             <select id="level" name="level" required>
                 <option value="">Pilih Level</option>
                 <option value="operator">Operator</option>
