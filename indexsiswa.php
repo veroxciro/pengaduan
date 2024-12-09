@@ -24,7 +24,7 @@ session_start();
     }
 
     header {
-        background-color: #fff;
+        background-color: #f5f0f7;
         padding: 1rem;
         box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         transition: all 0.3s ease-in-out;
@@ -73,14 +73,14 @@ session_start();
     }
 
     .navbar {
-        background-color: #3498db;
+        background-color: #f0ecf3;
         padding: 1rem 0;
         transition: all 0.3s ease-in-out;
         box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
     .navbar:hover {
-        background-color: #2ecc71;
+        background-color: #cab2d7;
         box-shadow: 0 5px 10px rgba(0,0,0,0.2);
     }
 
@@ -101,14 +101,15 @@ session_start();
     }
 
     .nav-links a, .dropdown .dropbtn {
-        color: white;
+        color: #ae3add;
         text-decoration: none;
         font-size: 1rem;
         transition: color 0.3s, transform 0.3s;
+        font-weight: bold;
     }
 
     .nav-links a:hover, .dropdown:hover .dropbtn {
-        color: #f1c40f;
+        color: #ffffff;
         transform: scale(1.1);
     }
 
@@ -126,7 +127,7 @@ session_start();
     .dropdown-content {
         display: none;
         position: absolute;
-        background-color: #fff;
+        background-color: #f5f0f7;
         min-width: 160px;
         box-shadow: 0 8px 16px rgba(0,0,0,0.1);
         z-index: 1000;
@@ -144,7 +145,7 @@ session_start();
     }
 
     .dropdown-content a:hover {
-        background-color: #f1f1f1;
+        background-color: #ae3add;
     }
 
     .dropdown:hover .dropdown-content {
@@ -184,7 +185,7 @@ session_start();
 
     .search-form button {
         padding: 0.5rem 1rem;
-        background-color: #2ecc71;
+        background: linear-gradient(to bottom, #cab2d7, #6760c3, #414155);
         color: white;
         border: none;
         border-radius: 4px;
@@ -198,18 +199,17 @@ session_start();
     }
 
     .main-content {
-        max-width: 1200px;
-        margin: 2rem auto;
-        padding: 2rem;
-        background-color: #fff;
+        max-width: 1500px;
+        padding: 5rem;
+        background: linear-gradient(to bottom, #cab2d7, #6760c3, #414155);
         border-radius: 8px;
         box-shadow: 0 0 10px rgba(0,0,0,0.1);
         transition: all 0.3s ease-in-out;
     }
 
     footer {
-        background-color: #34495e;
-        color: #fff;
+        background-color: #f5f0f7;
+        color: #773293;
         text-align: center;
         padding: 1rem 0;
         position: fixed;
@@ -232,6 +232,10 @@ session_start();
             margin-top: 1rem;
         }
     }
+
+    .logo-text .title, .logo-text .desc {
+    color: #ae3add;
+}
 </style>
 
 </head>
@@ -265,8 +269,6 @@ session_start();
                 
             </div>
             <form class="search-form">
-                <input type="text" placeholder="Cari..." aria-label="Cari">
-                <button type="submit"><i class="fas fa-search"></i> Cari</button>
                 <button><a style="text-decoration:none; color:white;" href="index.php"><i class="fas fa-right-from-bracket"></i>Logout</a></button>
 
             </form>
