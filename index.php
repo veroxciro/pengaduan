@@ -82,7 +82,7 @@ session_start();
     }
 
     .navbar:hover {
-        background-color: #f4e6c0; /* Sand (hover effect) */
+        background-color: #cab2d7; /* efek navbar yg berubah warna ny */
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     }
 
@@ -115,7 +115,7 @@ session_start();
 
     .nav-links a:hover,
     .dropdown:hover .dropbtn {
-        color: #f4e6c0; /* Sand */
+        color: #ffffff; /* Sand */
         transform: scale(1.1);
     }
 
@@ -128,7 +128,7 @@ session_start();
     .dropdown-content {
         display: none;
         position: absolute;
-        background-color: #f8f5e4; /* Sand */
+        background-color: #f5f0f7; /* Sand */
         min-width: 160px;
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
         z-index: 1000;
@@ -146,7 +146,7 @@ session_start();
     }
 
     .dropdown-content a:hover {
-        background-color: #d6cdbd; /* Soft sand */
+        background-color: #ae3add; /* Soft sand */
     }
 
     .dropdown:hover .dropdown-content {
@@ -175,7 +175,7 @@ session_start();
 
     .search-form button {
         padding: 0.5rem 1rem;
-        background: linear-gradient(#0f0c29, #6760c3, #24243e);
+        background: linear-gradient(to bottom, #cab2d7, #6760c3, #414155);
         color: white;
         border: none;
         border-radius: 4px;
@@ -190,14 +190,14 @@ session_start();
 
     .main-content {
         max-width: 1500px;
-        padding: 2rem;
+        padding: 5rem;
         background: linear-gradient(to bottom,  #cab2d7, #6760c3, #414155);
         transition: all 0.3s ease-in-out;
     }
 
     footer {
-        background-color: #add8e6; /* Light sky blue */
-        color: #333;
+        background-color: #f5f0f7; 
+        color: #773293;
         text-align: center;
         padding: 1rem 0;
         position: fixed;
@@ -261,8 +261,8 @@ session_start();
     bottom: 65px;
     right: 50px;
     display: none; /* Tombol akan tersembunyi secara default */
-    background-color: #3498db;
-    color: white;
+    background-color: #ffffff;
+    color: #6760c3;
     border: none;
     border-radius: 50%;
     width: 50px;
@@ -275,7 +275,7 @@ session_start();
 }
 
 #scrollToTopBtn:hover {
-    background-color: #2c81ba;
+    background-color: #7b75cf;
     transform: scale(1.1);
 }
 
@@ -380,8 +380,7 @@ session_start();
                
             </div>
             <form class="search-form">
-                <input type="text" placeholder="Cari..." aria-label="Cari">
-                <button type="submit"><i class="fas fa-search"></i> Cari</button>
+                
             </form>
         </div>
     </nav>
