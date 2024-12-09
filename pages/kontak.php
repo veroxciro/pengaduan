@@ -24,6 +24,7 @@
             flex-wrap: wrap;
             justify-content: space-between;
             gap: 2rem;
+            flex-direction: row-reverse; /* Membalikkan urutan elemen */
         }
 
         .card {
@@ -44,7 +45,7 @@
         .card-header {
             font-size: 1.5rem;
             font-weight: 700;
-            color: #3498db;
+            color: #ae3add;
             margin-bottom: 1rem;
         }
 
@@ -80,7 +81,7 @@
             display: inline-block;
             margin-top: 1rem;
             padding: 0.8rem 1.5rem;
-            background: #3498db;
+            background: #ae3add;
             color: white;
             font-weight: 500;
             text-decoration: none;
@@ -108,18 +109,18 @@
             <h3>R. Prawoto Hari Wibowo, M.Pd</h3>
             <p>Kepala SMK Negeri 6 Kota Bekasi</p>
             <div class="contact-item">
-                <i class="fas fa-map-marker-alt"></i>
+            <i class="fas fa-map-marker-alt" style="color: #ae3add;"></i>
                 <span>Jl. Kusuma Utara X No.169, Bekasi, Jawa Barat 17111</span>
             </div>
             <div class="contact-item">
-                <i class="fas fa-phone"></i>
+                <i class="fas fa-phone" style="color: #ae3add;"></i>
                 <span>(021) 8801386</span>
             </div>
             <div class="contact-item">
-                <i class="fas fa-envelope"></i>
+                <i class="fas fa-envelope" style="color: #ae3add;"></i>
                 <span>info@smkn6kotabekasi.sch.id</span>
             </div>
-            <a class="btn" href="https://smkn6kotabekasi.sch.id" target="_blank">Kunjungi Situs</a>
+            <a class="btn" href="https://smkn6kotabekasi.sch.id" target="_blank">Kunjungi Situs Sekolah</a>
         </div>
 
         <!-- Lokasi Kami -->
