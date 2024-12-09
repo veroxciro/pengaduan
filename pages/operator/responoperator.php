@@ -90,7 +90,7 @@ if (!$pengaduan) {
                 $structured_name = "images-uploaded/".htmlspecialchars($pengaduan['foto']);        
                 ?>
                 <img src="./assets/<?php echo $structured_name; ?>" alt="file foto">
-                <a href="assets/<?php echo $structured_name; ?>" download class="inline-flex mt-10 items-center px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 focus:outline-none focus:ring focus:ring-blue-300 transition-all duration-200 transform hover:scale-105">
+                <a href="assets/<?php echo $structured_name; ?>" download class="inline-flex mt-10 items-center px-4 py-2 text-sm font-medium text-white bg-purple-600 rounded-md hover:bg-blue-700 focus:outline-none focus:ring focus:ring-blue-300 transition-all duration-200 transform hover:scale-105">
                     <i class="fas fa-download mr-2"></i>Download Foto Laporan
                 </a>
             <?php else: ?>
@@ -103,7 +103,7 @@ if (!$pengaduan) {
             <h2 class="font-bold">Tindakan</h2>
             <!-- Tombol untuk memproses tanggapan -->
             <form method="post">
-                <button type="submit" class="bg-blue-500 mt-5 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                <button type="submit" class="bg-purple-500 mt-5 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                     Proses
                 </button>
             </form>
