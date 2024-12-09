@@ -15,7 +15,7 @@
         }
 
         .login-box {
-            background-color: #87ceeb; /* Sky blue */
+            background: url("https://img.freepik.com/premium-vector/abstract-realistic-technology-particle-background_23-2148414765.jpg?w=740") no-repeat center/ cover;
             padding: 2rem;
             width: 100%;
             border-radius: 10px;
@@ -26,6 +26,15 @@
             top: 200; /* Mengatur posisi dari atas */
             transform: translateY(-50%); 
                 }
+
+        .text-blue-600 {
+            color: #ae3add !important;
+            }
+
+        .text-gray-600 {
+            color: white;
+        }
+
     </style>
 </head>
 <div class="login-box rounded-lg shadow-lg p-8 w-full max-w-md">
@@ -43,10 +52,10 @@
 
             <div class="flex items-center">
                 <input type="checkbox" id="showPassword" onclick="togglePassword()" class="mr-2">
-                <label for="showPassword" class="text-sm text-gray-600">Tampilkan password</label>
+                <label for="showPassword" class="text-sm text-gray-600" style="color: white;">Tampilkan password</label>
             </div>
 
-            <input type="submit" value="Login" class="w-full py-2 bg-blue-600 text-black rounded-lg hover:bg-blue-700 transition duration-300 ease-in-out transform hover:scale-105">
+            <input type="submit" value="Login" class="w-full py-2 bg-white-600 text-black rounded-lg hover:bg-purple-700 transition duration-300 ease-in-out transform hover:scale-105">
         </form>
 
         <div class="mt-4 text-center">
